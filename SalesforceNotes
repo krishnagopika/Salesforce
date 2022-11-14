@@ -1,0 +1,47 @@
+1. Validation rules:
+
+object manager--> Validation rules-->new--> enter the details.
+
+example:
+percentage:
+100% is 1.00
+error message is mentioned(field level)
+
+note: Pre-existing values are not effected until the chnages are made to the record.
+
+
+2. Related lists(related objects) for records:
+
+Related lists can be eddited using the page layouts.
+Customizations like buttons related to related lists can be added based on the requiremnt.
+Parent-child relation exits not the other way.
+In parent object, the master detail relationship doesnt exist. 
+In child objetc the master detail relation exists for the related lists.
+
+3. Record Page Settings:
+
+Setup-->User Interface--> Record Page settings.
+
+Record page view:
+group view(details and related are under selection and the activity is displayed as an isolated tab) and full view(details, related and activities are classified and individulally  selected).
+Based on the user preference any view can be selected.
+
+Activity view:
+
+Activity timeline(the history of crud operations performed in activity is displayed) and related lists( only the related objects and the notes is diplayed in a single apge with options to select he related objects).
+
+Enhnaced Related lists and the List view Action:
+
+Enhnaced Related lists: upto 10 coloums at once, the text is wrapped or truncated.
+
+note: Any changes made can be assigned as org defaults, app defaults(overrides the org default), app, record and profile default(overrides the app default).
+
+List view Action bar: allows to select mutiple records at a time.
+
+
+
+
+
+
+
+
