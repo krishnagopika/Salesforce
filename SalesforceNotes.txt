@@ -1,0 +1,201 @@
+1. Validation rules:
+
+object manager--> Validation rules-->new--> enter the details.
+
+example:
+percentage:
+100% is 1.00
+error message is mentioned(field level)
+
+note: Pre-existing values are not affected until the changes are made to the record.
+
+
+2. Related lists(related objects) for records:
+
+Related lists can be edited using the page layouts.
+Customizations like buttons related to related lists can be added based on the requirement.
+Parent-child relations exist not the other way.
+In the parent object, the master-detail relationship doesn't exist. 
+In the child object, the master-detail relation exists for the related lists.
+
+3. Record Page Settings:
+
+Setup-->User Interface--> Record Page settings.
+
+Record page view:
+group view(details and related are under selection and the activity is displayed as an isolated tab) and full view(details, related and activities are classified and individually selected).
+Based on the user preference any view can be selected.
+
+Activity view:
+
+Activity timeline(the history of crud operations performed in the activity is displayed) and related lists( only the related objects and the notes are displayed on a single page with options to select the related objects).
+
+Enhanced Related lists and the List view Action:
+
+Enhanced Related lists: up to 10 colours at once, the text is wrapped or truncated.
+
+note: Any changes made can be assigned as org defaults, app defaults(overrides the org default), app, record and profile defaults (overrides the app default).
+
+List view Action bar: allows to select of multiple records at a time.
+
+Standard and Tile-related lists:
+
+Standard: Default
+
+Title: all the related records are displayed as tiles and by hovering over the specific record the details of the record are displayed.
+
+note:  Based on the user's preference the user can select any list for the default, enhanced, tile and basic list.
+
+Dynamic related lists:
+
+related list table and type of list
+configure the number of records to display
+show/hide list view action bar
+define related list filters
+configure actions
+set component visibility
+manage related lists fields( no page layout required)
+
+4. Business process for Standard objects
+
+Marketing: lead process(status of field )
+Sales:  Sales process(stages of oppurtunity)
+Service:  Support Process(status of cases)
+
+Solution process: creating picklist values for status.
+
+record types are created for business process.
+
+note: Page layputs can be assigned to a record type for customization.
+
+example: designing, construction, maintainace, inspection and emolition leads for a construction company.
+
+Junction Relationship:(many to many)
+
+Sales Cloud:
+
+Marketing: Campaigns and Leads
+
+Campaign: 
+Similar to a business campaign, started to create awareness to the brand.
+Linked to a leads and contacts using the campaign members.
+
+Lead:
+
+A contact from a company intereted in ypur company is considered as lead.
+Leads can be generated using campaigns.
+Leads are converted into oppurtunity once they are successfully converted.
+Lead data flows to oppurtunity, account and contact once they are converted.
+
+Adding a lead to a campaign:
+
+Lead--> Campaign History--> add to campaign--> select a campaign or create a new campaign..
+Lead to campaign: one to many relationship.
+Activity history is used to log a call or send an email.
+
+
+Web to Lead: 
+
+Feature settings--> web to lead.
+web to lead form is created, A html code is generated for the form, which can be used tin the company website..
+If a person enters the details and submits the form a new lead is created.
+
+Lead Assignment Rules:
+
+Based on the criteria the leads are assigned to a specific user( by default the system administrator )
+The category of a lead depends on whom the lead is assigned to and what the default leild for the profile assigned to that user.
+A new lead assignment rule is created, and a new rule entry is created which includes three criteria
+
+1. Sort order (priority order )
+2. Criteria for rule entry
+3. Select the user or queue to assign the lead.
+
+note:
+ If org contains record types and new lead is created manually or imported withput a record type. it will be created without a record type.
+When no assignment rules apply, the recoed type of the lead owner or queue owner  is used.
+
+Creating new status for lead conversion:
+
+If a new status is created based on the converted criteria it will not appear in the path. It appears in the lead status option and also as an option during conversion of lead to an opputunity.
+Any non converted status appears in the path.
+
+Lead Conversion Process:
+
+note: look into the leads description for info.
+
+leads are archived once they are converted.
+leads are archived once they are closed and not convered.
+Standard to Standard field mapping is done during the lead conversion.
+
+
+(important) Custom to Custom field mapping : 
+
+Fields and realations--> Map lead fields
+
+Lead conversion impact on campaign members:
+
+Campaign members can be leads or conatcts.
+If a lead is converted the it is part of campaign memebers as a contact.
+
+Campaign Heirarchy:
+
+
+A campaign can have a parent campaign.
+
+example: A West Bengal radio campaign can be part of East India radio campaign which can be part of India Campaign, which can be part of Asia campaign.
+
+Sales: Oppurtunity, Contact and Account
+
+Opportunity:
+
+The Probability increases as the oppurtynity progresses.
+The prbality for an Opportunity for a specific stage is calculated using statistics.
+The expected revenue is product of Ammount and Probaility.
+Account is a parent and oppurtunity is a child.
+An account may have multiple opportunities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
