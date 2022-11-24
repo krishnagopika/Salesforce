@@ -154,42 +154,448 @@ The expected revenue is product of Ammount and Probaility.
 Account is a parent and oppurtunity is a child.
 An account may have multiple opportunities.
 
+Relation between Sales process, Opportunity stages and Record types:
+
+Sales process is used to include or exclude a stage, A record type is self explanatory, any chnages to the parameters of a stage like probability, percentage and forecast category can be changed only in fields and relationships but not in the Sales process or Record types.
+Stages reordering cant be done in process or related fields. It can be done only in fields and relationships.
+
+note: a process is used to define a process where as a record type is to assign the process to an object and it also provides the profile level security.
+
+Adding aditional opportunity stages:
+
+When a new stage is created it can be any added to any pre-existing processes.
+
+Opportunity Record type and page layout assignments:
+
+Different page layouts can be assigned to different record types.
+Record types helps to add different page layouts based on profile, add or reorder fileds, order the related lists.
+
+Products and Price Books:
+
+The cost of the products in an opportunity are assigned to a pricebook.
+Every opportunity is linked to a specific pricebook.
+Every pricebook can have multiple products.
+For an opportunity no price book can be selected, but the products are fetched from the stnadard price book.
+
+Price Books:
+
+If the price book is changed for an opportunity, the products included from the previous pricebook are lost.
+
+Relationship between product, pricebook and opportunity:
+
+relation between the product, opportunity, and pricebook can be explained with opportunity product, pricebook details.
+
+Scheduling Products:
+
+Consider a scenario where 100 laptops are ordered by a company but the delivery is not going to be at once.  Small quantities of the product can be dlibved i the required dates. In orer to achive this product scheduling is done.
+Product scheduling settings--> enable the Scheduling.
+Quantity schedule: when product is delivered
+Revenue schedule: when product is paid for
+Default schedule: specific product in a specific pricebook. used by default.
+
+Adding Scheduling fields to the product page layout:
+
+edit page layout  of produt to add all additional fields.
+
+Adding a schedule product to an opportunity:
+
+products can be added in an opprtunity once the scheduling is done for the product.
+
+Forecast:
+
+Opportunities, opportunity products etc are forcasted to based on revenue or quantity.
+The commit forecast and the best case forecast can be adjusted.
+The forecasts made by an user can be sared with other users.
+Forecast heirarchy similar to role heirarchy is used.
+
+Forecast Adjustments:
+
+forecast users can adjust th eforecasts withput affecting the ammounts, close dates and forecast categories.
+Manager and owner adjustments are available.
+cumulative forecast rollup: based on role heirarchy the forecasts are rolled up.
+Show quota is enabled to show quota next to forecast
+
+Forecast Effect:
+
+Product Family:
+
+example: mouse, keyboard and headset come under accesories.
+Product family can be set using object manager and can be acticated and any of the family can be set as default.
+
+Customizable Campaign Infulence:
+
+Campaign Influence is used to measure and report on multiple campaigns that have infulenced a single opportunity.
+Inflential campaigns can be associated to opportunities automatically or mannualy.
+
+Auto association settings: 
+
+Used ot assoicated with opportunities automatically.
+No of days and conditions are used to autoassign an opportunity to a campaign.
+
+Model Settings:
+
+New attribution model
+
+Adding Campaign Influence related lists:
+
+Service cloud user permision shpould be assigned for an user to edit page layout to add campaign influence related lists.
+In service cloud the campaign influence permision is enabled.
+
+Adding Influenced Opportunities to the Campaign:
+
+Similar to adding the campaign influence.
+
+Creating a ligntning app and Adjusting Utility and Navigation Items in App:
+
+Setup-->App Manager
 
 
+Contact roles and opportunities:
+
+Every contact has a role in opportunity like sponser, Decision maker etc.
+And the campaign influence is automatically updated based on the contacts added with their roles.
+
+Big Deal Alerts:
+
+Automatic email is sent when a given opportunity reaches the desired threhold.
+
+Opportunity Settings, Splits and Teams:
 
 
+prompt users to add products to opportunities:
+
+advisable if its a product based company. If its a service based comapany its better to ignore this.
+
+When users add a product to opp, insert a quantity of 1:
+
+helpfull.
+
+Opportunity team settings:
+
+when enabled opoortunity split settings are visible:
+
+Opportunity split settings:
+
+allows sales reps to collaborate and share opportunity revenue.
+
+Similar Opportunities:
+
+To identify the similar opportunities in an org based on some match criteria.
+Fields to be diaplayed in similar opportunites.
+By bookmarking an opportunity the opportunity is added to the similar opportunity related list.
+
+note: only available in classic not in lightning.
+
+Lead Scoring and Opportunity Scoring:
+
+Available in enterprise edition.
+Based on the probability of closing the lead and the rating of lead the score is calculated.
+Based on the probablity of cloasing an opportunity succesfull the score is calculated.
+Marketing and sales employees can focus on important opportunities and leads based on rating.
+
+Home Page Assistant:
+
+Leads assigned 
+Opportunities that are overedew
+Opportunities with no activity for past 30 days.
+
+Salesforce CRM content:
+
+Used to share files publically with links.
+Password protection can be added.
+
+Content Packs:
+
+A content pack is a collection of related documents or files that are stored as a group in Salesforce CRM Content.
+Content packs are retired from salesforce spring 20 release.
+
+Files:
+
+Setup--> files--> edit-->create a public link.
+Rules for sharing can be assigned in Salesforce CRM content.
 
 
+Service and Support:
+
+Cases(tickets), Accounts and contacts, Knowledge.
+
+Enable both service cloud user and knowledge user for an user
+
+Cases:
+
+hopping to resolve customer issues
+Lookup relations with account and contact.
 
 
+Closed status:
+
+Support settings--> enable show closed ststusesin case status field.
+
+Support process:
+
+to maintain the clients, the statuses are adjusted.
+
+Same process for record type and page layout assignments.
+
+path in cases should be added explicitly.
+
+Parent 
+
+Case Assignment Rules:
+
+Similar to lead assignment rules.
+
+Service Console:
+
+cases and case details are at a single place.
+
+Case Queue:
+
+Collection of users to manage a shared workload more efficiently.
+
+Case Escalations:
+
+escalation rule queue is used to view pending actions and cancel.
+
+Surveys:
+
+Surveys can be added to web forms.
+Surveys are enabled and then they are added to web forms.
 
 
+Digital experiance/portal/community:
+
+Used to create service websites and knowlege forms for customers.
+
+Email to Case:
+
+An email is sent to 
 
 
+Case Team:
+
+Case teams can be added to cases 
+
+example :  a QA team, Installation team etc.
+
+Case Closure Configuration:
+
+In classic a close case button and close case page layout is available.
+Close case quick action buttom is created in feed in lightning.
+
+Salesforce Solution management:
+Knowdledge:
+
+Knowldge is enabled an din service setup, knowledge articles are created
+Using Knowledge custom object new know knowledge articles can be written.
+a defauly FAQ record type is available.
+Articles can be written, published and reassigned to people.
+Knowldge articles are edited as draft while published article is available to users.
+Knowledge articles can be added in cases of service console using the knowldge object in page layout.
+Knowledge articles are linke to a case by naming the case similar to the knowledge article.
+Once a knowledge article is validated, it can be added to the case.
+
+Omni Channel Setup:
+
+bases on the type and the complexity of the case and the skillset of the agent.
+
+Productivity and Collaboration:
+
+Activity managemnt, Chatter and AppExchange.
 
 
+Activity Settings:
+
+Enable Group Tasks: a task can be assigned more than one person.
+New tasks can be created for an activity and they can be associated with a contact or lead.
+The due date can be set and once task is ticked off, it appears in activity history rather then the upcomming.
+
+Task Page Layout Customizations and Recurring Tasks:
+
+Tasks can be customized as any other object.
+WhatId is an advanced level concept which has lookup relations to some objects.(imp for a developer)
+
+Event Managemnt in Salesforce:
+
+Event like any other object can be customized.
+Event is calender driven like a meeting.
 
 
+Public calenders and resources:
+
+calender can be created for users, roles and role heirarchies.
 
 
+Events are rolled up to the primay activity if its enabled.
+
+Salesforce Chatter App:
+
+what i folow
+to me
+bookmarked
+company highlight
+my drafts
 
 
+Chatter feed is not enabled for records of all objects. 
+Chatter field should be enabled for a specific object.
+setup-->feed-->feed tracking.
+
+Chatter groups:
 
 
+Users can be added inside and outsode the saleforce.
+posts can be made using emails
+
+Chatter Streams:
+
+Used to filter feed based on topics, account, etc.
+
+Chatte topic:
+
+Posts with #.
+
+Slack:
+
+Future of salesforce collaboration.
+Might replace chatter.
+
+Salesforce Mobile App:
+
+Navigation and setup:
+
+Navigation menu can be customized.
+
+Mobile tools:
+
+Branding: colors and logo can be added.
+Notifications: In app and push notifications can be enabled or diabled.
+Salesforce offline: aloowing caching for specifics apps to load and update the data during capricious network.
+Salesforce settings:
+app access: onboarding tios and feedback.
+device access: import contacts.
+
+Custom launch pad for salesforce mobile app:
+
+lightning app builder--> new app page--> app page
+
+Launchpad--> add items--> 20 items.
+
+Visibility can be set and the app can be activated.
+
+object specific quick actions can be added to the app and lightninmg page.
+
+Global Actions:
+
+Actions that are not specific to an object.
+
+new actions can be created and using publisher layout th global actions can be added or removed.
+
+Outlook and Gmail Integration:
+
+Outlook and gmail can be Integrated with the salesforce and the data like contacts, calneder, events and emails related to records can be exchanged between the platforms.
+
+App exchange:
+
+App Exchange tour:
+
+Apps, Bolt solution, flow solution,  components, data and consultant
+
+Installing apps:
+
+Packaging --> Installed Packages
+
+managed( can or cannot be edited)
+unmanaged( can be edited as per requiremnts)
+
+components and dependencies can be viewed.
+
+Data Analytics Management:
+
+Data Management: Import and Export of data.
+
+Data Analytics: Creating reports and dashboards.
+
+Data Export:
+
+Monthly and weekly export of data(not meta data) and downloaded as a zip file.
+Images and other files can be included or excluded in the data export.
+Exports can be Scheduled.
+Include all data is used to selct alll objects.
+
+note: If a new object is created the included all objects should be selected again to include the new object.
+
+an email will be recieved with a link to download the zip file(with individual csv files).
+
+Data Loader:
+
+jre version 11 or higher is required and a path enviormntal variable is added.
+
+login can be denied :
+
+to troubleshoot this the security token should be used.
+
+reset the security token--> an email is recieved with the new security token, which can be used for the login.
+
+Security token should be saved for furture reference.
+
+records of an object can be extracted with SOQl(Salesforce Object Query Language)  in the for of csv file.
+
+Restoring records from recycle bin:
+
+App Launcher --> recycle bin.
+
+note: IsDeleted flag is present for every record, which can be used filter and export deleted records using export all option.
 
 
+Buttons in Data Loader:
+
+Insert: inserting records( record id not required)
+Update: update the records ( exported and then edited before inserting)
+Upsert: ( Update and Insert)
+Delete: delete records.
+Hard Delete: delete records permanently( goes beyond the recycle bin).
+
+Settings:
+
+use bulk api is used to turn o hard delete.
+enable null values will wipeout the existing field data if the field is empty while updating.
+
+Update:
+A custom mapping can be created and saved using " save mapping" for future use.
+custom mapping can be avoided and auto matcing can be used to map the fields if the changes are carefully made in an exported file.
+Bulk updates are made as batches with 200 records per batch.
+The success and error reports are saved in the local system.
+
+Upsert:
+
+Insertion and updating the record.
+A custom external reord id can be used if required.
 
 
+Data Import wizard:(only to insert and update)
+
+50000 records can be insterted or updated at once.
+only few standard objects are available.
+selection of object --> field mapping.
+
+DataLoader.io:
+
+Developed by mulesoft.
+enhanced version of Data Loader.
+
+Data Quality can be ensured using validation rules.
 
 
+Dupicate rules:
 
+The duplicate rules are created for object susing matching rules.
+Matching rules can be exact or fuzzy depending on the field.
+A duplicate rule can have multiple matching rules.
+duplicate records can be blocked or aloowed with alerts and reports.
+The duplicate record set has the duplicate records if report is enabled.
 
-
-
-
-
-
-
+Duplicate Lightning component:
 
 
 
