@@ -597,11 +597,204 @@ The duplicate record set has the duplicate records if report is enabled.
 
 Duplicate Lightning component:
 
+Potential duplicate ligtning component comes with a toast(notification) and a card.
+It is available only for standard objects.
+
+Merging records:
+
+potential duplicates card can be used to merge the duplicates
 
 
+Universal Picklists:
+
+State and Countr/teritory picklist is used for stndadized country and state picklists.
+
+Data.com(jigsaw accuried by salesforce) (mostly retired):
+
+used to import contact and account information.
+replaced with lighting data and appexchange apps.
+
+Workbench and SOQL queries:
+
+used to write SOQL and SOSL quries.
+Migration: used to impirt and export data from one or to other.
+Its used for data loading
+
+Data Analytics:(dashboards and reports)
+
+Report format:
+
+1. Tabular: To create lists not used for dashboards.
+
+2. Summary: created by grouping the rows, used for dashboards and heirarchial data
+
+3. Matrix: created by filtering based on rows and colomns, used for dashboards and when the data is complex and requires filtering using multiple fields.
+
+4. Joined: report with reports
 
 
+When a report is created it a table by edditing the report and grouping  the rows and/or columns the other report can be created.
 
+
+Adding Chart to summary report:
+
+In summary report "add chart" button is used to add a chart.
+
+Creating a Joined report:
+
+A joined report is created by clicking edit option in any report, selecting the joined report and by adding a block.
+
+Installing apps using App Exchange:
+
+
+Summary and Row level formula:
+
+coloumns--> add Summary formula(grouping rows)/ row level formula(individual rows).
+
+Bucket Coloumn:
+
+rows can be categorized using the bucket coloumn. 
+
+example: categorizing the opportunities into small, medium and large based on the revenue.
+
+History Report:
+
+field history can be grouped with the id to delete any history changes made.
+
+Cross Filters:
+
+filters --> cross filters(with or without).
+
+example
+
+contacts with opportunities
+
+Custom Reports:
+
+setup-->analytics-->report types-->new sustom report type
+(can be linked with 4 objects )
+
+
+Report Subscription:
+
+Reports can be subscribed monthly, weekly and daily.
+And also alert emails can be sent if any conditions are met.
+The reports can be shared with contacts in the shared folder.
+The reports can subscribed as formated files or non formated files.
+
+Historical Trend Reporting:
+
+Setup--> Feature Settings --> Analytics --> Historical Trending(enable)
+Objects are feilds of objects are selected.
+Historical trending reports can be created for those objects with time ( one month, 2 months , 2 days etc).
+
+Reporting Snapshots:
+
+Source report and target object.
+rows from summarized source report are converted to records in a custom object.
+coloumns of report are mapped to fields of an object.
+
+
+Sharing model impact on reports:
+
+If an user doenst have access to records then those records are not visible in reports for that specific user?
+
+Dashboard:
+
+Dashboards are visual representations created from the reports
+All reports can be used to create dash boards.
+
+note: When joined reports can be used to create a dashboard , only if they have any charts in the repost. only the charts in jpined reports are imported to dashboard.
+
+Dashboards can be edited and refereshed manually with 1 min interval.
+Dashboards can be subscribed similar to reports and email alerts can be sent when an dashboard is refereshed .
+Users can be added for a particular dashboard subscribtion.
+
+Dynamic Dashboards:
+
+The charts in dashboards avry with the security access of the user, this feature is called dynamic dashboards.
+As an admin one can edit the view as user and the access to choose an user.
+
+Setting Decimal Precession to Dashboards:
+
+the dashboard components can be edited and decimal precesion can be set.
+
+Dashboard Filters:
+
+Filters can be added to the dashboard components and the data in the components can be filtered
+
+example: accounts with billing company as India.
+
+Conditional highlighting in reports and dashboards:  
+
+values can be set to classify the data as red yellow and red using conditional highlighting.
+
+Creating custom home page to lightning app:
+
+setup--> app manger--> select the app --> edit --> navigation-->ad home and move it to the top.
+option 1:edit page and--> pages--> create a new home page.
+option 2: setup-->lightning app builder--> select page -->clone--> edit the page and set it as app default.
+
+Tableau CRM Analytics Studio( goes beyond admin exam previously known as einstein analytics and wave analytics):
+
+only available for einstein analytics account.
+can create app, dashboard, story and data set.
+In future the Dashboards might be completely replaced with tableu.
+Tableu has superior data visulization and data analytic features.
+
+WorkFlow and Process Automation:
+
+Automation Home page:
+
+It is used to create process, workflow rules, flows, next best action and aproval process.
+
+Workflow rules:
+
+workflows can be used to assign tasks, send email alerts, update fields and send outbound messages.
+workflow rules consists of
+
+1. a criteria 
+2. An immediate action 
+3. time dependent actions that occur in a queue when a record matches the criteria.
+
+Workflow rules are created and immeduate actions are created for workflow rules.
+
+Time dependent workflow rules:
+
+Process automation settings should be set.
+The workflow is diabled and time trigger is  created 
+A workflow action is added to the time trigger rule
+
+Time Based workflow rule:
+
+used to see scheduled actions.
+Filters can be applied.
+
+note: When records are deleted the time based workflow is deleted.
+
+Creating Email alerts:
+
+first step to create an email alert is to create an email template.
+email alerts can be created with recipients and upto 5 members can be notified.
+
+Email Template:
+
+classic email template and lightning email template are two types of email templates.
+Merge fields can be used to add details like account name etc to an email template.
+
+classic email template: setup-->cet
+
+lightning email template: record--> email--> email template--> create new email template
+or 
+App launcher--> new email template.
+
+Outbound messages:
+
+messages sent to ecternal servers are called outbound messages.
+
+example: salesforce to revpro integration
+
+Approval Process:
 
 
 
